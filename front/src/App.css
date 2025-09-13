@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  text-align: center;
+  background-color: #4ABEEC;
+}
+
+.rotateX-12 {
+  transform: perspective(1000px) rotateX(20deg);
+}
+
+.opponent-hand-top {
+  transform: perspective(800px) rotateX(-20deg) translateY(20px);
+}
+
+.opponent-hand-left {
+  transform: perspective(800px) rotateY(45deg) translateX(20px);
+}
+
+.opponent-hand-right {
+  transform: perspective(800px) rotateY(-45deg) translateX(-20px);
+}
+
+.deck-3d {
+  transform: none;
+}
+
+/* Zone de drop pour le drag and drop */
+.drop-zone {
+  transition: all 0.2s ease;
+}
+
+.drop-zone:hover {
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+/* Animation de survol pendant le drag */
+.drag-over {
+  background-color: rgba(34, 197, 94, 0.2) !important;
+  transform: scale(1.02);
+} 
