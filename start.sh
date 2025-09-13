@@ -91,7 +91,7 @@ case $MODE in
         log_info "Lancement en mode développement..."
         
         # Backend
-        log_info "Démarrage du backend sur le port 3001..."
+        log_info "Démarrage du backend sur le port 4000..."
         cd server
         pnpm start &
         BACKEND_PID=$!
@@ -108,7 +108,7 @@ case $MODE in
         log_info "==================================="
         log_info "Services démarrés!"
         log_info "Frontend (dev): http://localhost:3000"
-        log_info "Backend: http://localhost:3001"
+        log_info "Backend: http://localhost:4000"
         log_info "Appuyez sur CTRL+C pour arrêter"
         log_info "==================================="
         
@@ -129,7 +129,7 @@ case $MODE in
         fi
         
         # Backend
-        log_info "Démarrage du backend sur le port 3001..."
+        log_info "Démarrage du backend sur le port 4000..."
         cd server
         pnpm start &
         BACKEND_PID=$!
@@ -151,7 +151,7 @@ case $MODE in
         log_info "==================================="
         log_info "Services démarrés!"
         log_info "Frontend: http://localhost:3000"
-        log_info "Backend: http://localhost:3001"
+        log_info "Backend: http://localhost:4000"
         log_info "Appuyez sur CTRL+C pour arrêter"
         log_info "==================================="
         

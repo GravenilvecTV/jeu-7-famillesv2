@@ -67,7 +67,7 @@ Le jeu sera accessible sur `http://localhost:3000`
 - Ubuntu 20.04+ ou Debian 11+
 - Node.js 18+ installé
 - pnpm installé globalement
-- Ports 3001 (backend) et 3000 (frontend) ouverts
+- Ports 4000 (backend) et 3000 (frontend) ouverts
 
 ### Installation sur VPS
 
@@ -87,7 +87,7 @@ pnpm build
 
 # 4. Configurer les variables d'environnement
 cd ../front
-echo "REACT_APP_SERVER_URL=http://VOTRE_IP_VPS:3001" > .env.production
+echo "REACT_APP_SERVER_URL=http://VOTRE_IP_VPS:4000" > .env.production
 
 # 5. Lancer avec le script
 cd ..
@@ -126,7 +126,7 @@ server {
 
     # Backend API
     location /socket.io/ {
-        proxy_pass http://localhost:3001;
+        proxy_pass http://localhost:4000;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
@@ -194,9 +194,9 @@ jeu-7-familles/
 ## 🐛 Résolution de problèmes
 
 ### Le frontend ne se connecte pas au backend
-- Vérifier que le backend tourne sur le port 3001
+- Vérifier que le backend tourne sur le port 4000
 - Vérifier la variable `REACT_APP_SERVER_URL` dans `.env.production`
-- Vérifier les règles firewall pour les ports 3001 et 3000
+- Vérifier les règles firewall pour les ports 4000 et 3000
 
 ### Erreur "Port already in use"
 ```bash
